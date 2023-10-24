@@ -1,5 +1,8 @@
-<!-- https://codepen.io/stack-findover/pen/eYWPwPV -->
-<div class="bg" />
+<script>
+	import { TwicImg } from "@twicpics/components/sveltekit";
+</script>
+
+<TwicImg />
 
 <div class="star-field">
 	<div class="layer" />
@@ -8,27 +11,6 @@
 </div>
 
 <style>
-	.bg {
-		background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
-		background-size: cover;
-		height: 100%;
-		width: 100%;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: -3;
-	}
-	.bg:before {
-		content: "";
-		width: 100%;
-		height: 100%;
-		background: #000;
-		position: fixed;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		opacity: 0.3;
-	}
 	@keyframes sf-fly-by-1 {
 		from {
 			transform: translateZ(-600px);

@@ -1,4 +1,7 @@
 <script>
+	import { fade } from "svelte/transition";
+	import LineItemConector from "../lib/LineItemConector.svelte";
+
 	let open = null;
 
 	const setOpen = (e) => {
@@ -7,22 +10,17 @@
 </script>
 
 <div
-	class="flex w-full h-full justify-end transition-all duration-300"
-	class:w-[50%]={!open}
-	class:w-full={open && open % 2 === 0}
-	class:w-16={open && open % 2 === 1}
+	class="relative flex justify-center w-full h-full transition-all duration-300 uciel"
 >
-	<div class="le flex flex-col gap-8">
-		<div id="1" class="w-16 h-16 bg-white rounded-full" on:click={setOpen} />
-		<div id="3" class="w-16 h-16 bg-white rounded-full" on:click={setOpen} />
-		<div id="5" class="w-16 h-16 bg-white rounded-full" on:click={setOpen} />
-	</div>
+	<div
+		class="absolute top-0 right-[calc(50% - 0.25rem)] h-full w-[2px] bg-white"
+	/>
 
-	<div class="w-2 h-full bg-white" />
-
-	<div class="le flex flex-col gap-8">
-		<div id="2" class="w-16 h-16 bg-white rounded-full" on:click={setOpen} />
-		<div id="4" class="w-16 h-16 bg-white rounded-full" on:click={setOpen} />
-		<div id="5" class="w-16 h-16 bg-white rounded-full" on:click={setOpen} />
+	<div class="flex flex-col gap-4 py-4">
+		{#each Array(5) as _, i}
+			<div in:fade={{ delay: 110 * (i + 1), duration: 150 }}>
+				<LineItemConector right={i % 2 !== 0} />
+			</div>
+		{/each}
 	</div>
 </div>
