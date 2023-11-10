@@ -1,36 +1,41 @@
 <script lang="ts">
-	import { fade } from "svelte/transition";
+	import { fade, fly } from "svelte/transition";
 
 	export let right = false;
 </script>
 
 <div class="relative h-min">
-	<div class="flex">
-		<div
-			class="w-[60px] h-[60px] {!right
-				? 'border border-b-0 border-white rounded-tl-full'
-				: ''}"
-		/>
+	<div class="absolute left-1/2 h-full w-[1px] bg-white" />
+	<div id="top-half" class="flex">
+		{#if right}
+			<div class="w-[60px] h-[60px]" />
 
-		<div
-			class="w-[60px] h-[60px] {right
-				? 'border border-b-0 border-white rounded-tr-full'
-				: ''}"
-		/>
+			<div
+				class="h-[60px] w-[60px] border border-b-0 border-white rounded-tr-full"
+			/>
+		{:else}
+			<div
+				class="h-[60px] w-[60px] border border-b-0 border-r-0 border-white rounded-tl-full"
+			/>
+
+			<div class="w-[60px] h-[60px]" />
+		{/if}
 	</div>
-	<div class="flex">
+
+	<div id="bottom-half" class="flex">
 		<div class="w-[60px] h-[60px]" />
 
 		<div class="w-[60px] h-[60px]" />
 	</div>
 
 	<div
+		id="hor-line"
 		class="absolute top-[50%] w-3/4 h-[1px] bg-white"
 		class:left-[50%]={right}
 		class:right-[50%]={!right}
 	/>
 
-	<div class="absolute top-[19%] right-[19%]">
+	<div id="circles" class="absolute top-[19%] right-[19%]">
 		<div
 			class="flex items-center justify-center border border-white rounded-full w-[4.5rem] h-[4.5rem]"
 			in:fade={{ delay: 100 }}

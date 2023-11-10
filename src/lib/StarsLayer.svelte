@@ -1,9 +1,3 @@
-<script>
-	import { TwicImg } from "@twicpics/components/sveltekit";
-</script>
-
-<TwicImg />
-
 <div class="star-field">
 	<div class="layer" />
 	<div class="layer" />
