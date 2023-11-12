@@ -2,10 +2,15 @@
 	export let label = '';
 	export let color = '';
 	export let isLast = false;
+	export let isFirst = false;
 </script>
 
-<div class="relative py-4">
-	<div id="ver-line" class="absolute z-0 w-[1px] bg-[#D9D9D9] h-full left-1/2" />
+<div class="relative py-4" class:!pt-8={isFirst}>
+	{#if isFirst}
+		<div id="ver-line-1" class="absolute z-0 w-[1px] bg-lines h-[2rem] left-1/2 top-0" />
+	{/if}
+
+	<div id="ver-line" class="absolute z-0 w-[1px] bg-lines h-full left-1/2" />
 
 	<div class="relative z-10 flex items-center justify-center left-[3.9rem]">
 		<svg
@@ -14,15 +19,18 @@
 			xmlns="http://www.w3.org/2000/svg"
 			class="py-1.5 w-[7rem]"
 		>
-			<path d="M49 21V21C49 36.464 36.464 49 21 49V49" stroke="#fff" stroke-width="0.5" />
+			<path
+				d="M49 21V21C49 36.464 36.464 49 21 49V49"
+				class="stroke-lines"
+				stroke-width="0.5"
+			/>
 
 			<circle
 				cx="21"
 				cy="21"
 				r="3"
 				transform="rotate(180 21 21)"
-				fill={`#${color}`}
-				stroke={`#${color}`}
+				class="stroke-{color} fill-{color}"
 				stroke-width="0.5"
 			/>
 			<circle
@@ -30,7 +38,7 @@
 				cy="21"
 				r="20"
 				transform="rotate(180 21 21)"
-				stroke={`#${color}`}
+				class="stroke-{color}"
 				stroke-width="0.5"
 			/>
 			<circle
@@ -38,7 +46,7 @@
 				cy="21"
 				r="6"
 				transform="rotate(180 21 21)"
-				stroke={`#${color}`}
+				class="stroke-{color}"
 				stroke-width="0.5"
 			/>
 			<circle
@@ -46,19 +54,18 @@
 				cy="21"
 				r="10"
 				transform="rotate(180 21 21)"
-				stroke={`#${color}`}
+				class="stroke-{color}"
 				stroke-width="0.5"
 			/>
 			<path
-				d="M72.6667 20.9008C72.6667 21.6372 73.2636 22.2342 74 22.2342C74.7364 22.2342 75.3333 21.6372 75.3333 20.9008C75.3333 20.1644 74.7364 19.5675 74 19.5675C73.2636 19.5675 72.6667 20.1644 72.6667 20.9008ZM74 20.6508L21.9106 20.6508L21.9106 21.1508L74 21.1508L74 20.6508Z"
-				fill={`#${color}`}
+				d="M63.6667 20.9948C63.665 21.7311 64.2606 22.3294 64.997 22.3311C65.7334 22.3327 66.3317 21.7371 66.3333 21.0008C66.335 20.2644 65.7394 19.6661 65.003 19.6644C64.2666 19.6628 63.6683 20.2584 63.6667 20.9948ZM65.0006 20.7478L21.9112 20.6509L21.9101 21.1509L64.9994 21.2478L65.0006 20.7478Z"
+				class="fill-{color}"
 			/>
 		</svg>
 
-		<div class="pb-2 -ml-2">
+		<div class="pb-2 -mt-1 -ml-6">
 			<span
-				class="block w-[5rem] p-1 text-xs text-center border rounded-md"
-				style="border-color: {`#${color}`}; color: #{color}"
+				class="block w-[6rem] p-1 text-xs text-center border border-{color} text-{color} rounded-md"
 			>
 				{label}
 			</span>
@@ -68,7 +75,7 @@
 	{#if isLast}
 		<div
 			id="ver-line"
-			class="absolute z-0 w-[3px] bg-[#D9D9D9] h-[3px] rounded-full left-[49.5%]"
+			class="absolute z-0 w-[3px] bg-lines h-[3px] rounded-full left-[49.5%] -bottom-4"
 		/>
 	{/if}
 </div>

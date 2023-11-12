@@ -12,7 +12,7 @@
 	<Header />
 
 	<h3
-		class="mx-4 text-xl leading-none tracking-tighter text-center text-white border-b border-white"
+		class="mx-4 text-xl leading-none tracking-tighter text-center text-white border-b text-lines border-lines"
 	>
 		SINFONÍA ESTELAR TANGUERA
 	</h3>

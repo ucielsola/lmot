@@ -9,8 +9,8 @@
 	{@const isLast = i === $dataStore.data.length - 1}
 
 	{#if i % 2 !== 0}
-		<LineItemRight {label} {color} {isLast} />
+		<LineItemRight {label} {color} {isLast} isFirst={i === 0} />
 	{:else}
-		<LineItemLeft {label} {color} {isLast} />
+		<LineItemLeft {label} {color} {isLast} isFirst={i === 0} />
 	{/if}
 {/each}

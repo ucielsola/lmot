@@ -11,7 +11,7 @@
 	</span>
 
 	<svg viewBox="0 0 76 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-14">
-		<path d="M27 29V29C27 13.536 39.536 1 55 1V1" stroke="#D9D9D9" stroke-width="0.5" />
+		<path d="M27 29V29C27 13.536 39.536 1 55 1V1" stroke-width="0.5" class="stroke-lines" />
 
 		<circle cx="55" cy="29" r="3" fill="#ABEBBD" stroke="#ABEBBD" stroke-width="0.5" />
 		<circle cx="55" cy="29" r="20" stroke="#ABEBBD" stroke-width="0.5" />
