@@ -7,6 +7,7 @@
 
 	import StarsLayer from '$lib/StarsLayer.svelte';
 	import Loader from '$lib/loader.svelte';
+	import Background from '$lib/Background.svelte';
 
 	let imageURL;
 	let innerHeight;
@@ -23,8 +24,8 @@
 			path: '/lmot/lmot_bg.png',
 			transformation: [
 				{
-					height: innerHeight + 200,
-					width: innerWidth + 200,
+					height: innerHeight,
+					width: innerWidth,
 				},
 			],
 		});
@@ -38,16 +39,12 @@
 <svelte:window bind:innerHeight bind:innerWidth />
 
 {#if loaded}
-	<div
-		class="relative w-screen h-screen overflow-hidden bg-fixed bg-center bg-cover"
-		style={`background-image: url('${imageURL}')`}
-		in:fade
-	>
-		<div class="absolute top-0 left-0 z-0 w-screen h-screen">
-			<StarsLayer />
+	<div class="relative w-screen h-screen" in:fade>
+		<div class="absolute -z-10">
+			<Background {imageURL} />
 		</div>
 
-		<div class="w-full h-full overflow-y-auto" in:fade={{ delay: 300 }}>
+		<div class="w-full h-full overflow-clip" in:fade={{ delay: 300 }}>
 			<slot />
 		</div>
 	</div>

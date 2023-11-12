@@ -1,15 +1,22 @@
 <script>
-	import { fade } from "svelte/transition";
-	import LineItemConector from "$lib/LineItemConector.svelte";
+	import Header from '$lib/Header.svelte';
+	import InteractiveLine from '$lib/InteractiveLine.svelte';
+
+	let headerHeight;
 </script>
 
-<div class="flex justify-center w-full h-full">
-	<div class="relative flex flex-col h-full py-4">
-		{#each Array(8) as _, i}
-			<div in:fade|global={{ delay: 100 * i, duration: 500 }}>
-				<LineItemConector right={i % 2 !== 0} />
-			</div>
-		{/each}
+<div bind:clientHeight={headerHeight}>
+	<div>
+		<Header />
+	</div>
+
+	<div>
+		<h3
+			class="mx-4 text-xl leading-none tracking-tighter text-center text-white border-b border-white"
+		>
+			SINFONÍA ESTELAR TANGUERA
+		</h3>
 	</div>
 </div>
-ƒ
+
+<InteractiveLine {headerHeight} />

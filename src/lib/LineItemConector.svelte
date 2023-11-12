@@ -1,59 +1,30 @@
 <script lang="ts">
-	import { fade, fly } from "svelte/transition";
+	import { fade } from 'svelte/transition';
 
 	export let right = false;
+	export let label = '';
 </script>
 
-<div class="relative h-min">
-	<div class="absolute left-1/2 h-full w-[1px] bg-white" />
-	<div id="top-half" class="flex">
-		{#if right}
-			<div class="w-[60px] h-[60px]" />
+<div class="flex items-center">
+	<span class="text-xs" class:opacity-0={right}>
+		{label}
+	</span>
 
-			<div
-				class="h-[60px] w-[60px] border border-b-0 border-white rounded-tr-full"
-			/>
-		{:else}
-			<div
-				class="h-[60px] w-[60px] border border-b-0 border-r-0 border-white rounded-tl-full"
-			/>
+	<svg viewBox="0 0 76 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-14">
+		<path d="M27 29V29C27 13.536 39.536 1 55 1V1" stroke="#D9D9D9" stroke-width="0.5" />
 
-			<div class="w-[60px] h-[60px]" />
-		{/if}
-	</div>
+		<circle cx="55" cy="29" r="3" fill="#ABEBBD" stroke="#ABEBBD" stroke-width="0.5" />
+		<circle cx="55" cy="29" r="20" stroke="#ABEBBD" stroke-width="0.5" />
+		<circle cx="55" cy="29" r="6" stroke="#ABEBBD" stroke-width="0.5" />
+		<circle cx="55" cy="29" r="10" stroke="#ABEBBD" stroke-width="0.5" />
 
-	<div id="bottom-half" class="flex">
-		<div class="w-[60px] h-[60px]" />
+		<path
+			d="M3.3333 29.0991C3.3333 28.3627 2.73635 27.7658 1.99997 27.7658C1.26359 27.7658 0.666635 28.3627 0.666635 29.0991C0.666635 29.8355 1.26359 30.4325 1.99997 30.4325C2.73635 30.4325 3.3333 29.8355 3.3333 29.0991ZM1.99997 29.3491L54.0894 29.3491L54.0894 28.8491L1.99997 28.8491L1.99997 29.3491Z"
+			fill="#ABEBBD"
+		/>
+	</svg>
 
-		<div class="w-[60px] h-[60px]" />
-	</div>
-
-	<div
-		id="hor-line"
-		class="absolute top-[50%] w-3/4 h-[1px] bg-white"
-		class:left-[50%]={right}
-		class:right-[50%]={!right}
-	/>
-
-	<div id="circles" class="absolute top-[19%] right-[19%]">
-		<div
-			class="flex items-center justify-center border border-white rounded-full w-[4.5rem] h-[4.5rem]"
-			in:fade={{ delay: 100 }}
-		>
-			<div
-				class="flex items-center justify-center w-[3rem] h-[3rem] border border-white rounded-full"
-				in:fade={{ delay: 140 }}
-			>
-				<div
-					class="flex items-center justify-center w-[2rem] h-[2rem] border border-white rounded-full"
-					in:fade={{ delay: 180 }}
-				>
-					<div
-						class="w-[1rem] h-[1rem] bg-white rounded-full"
-						in:fade={{ delay: 220 }}
-					/>
-				</div>
-			</div>
-		</div>
-	</div>
+	<span class="text-xs" class:opacity-0={!right}>
+		{label}
+	</span>
 </div>
