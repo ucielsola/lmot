@@ -24,7 +24,7 @@
 			path: '/lmot/lmot_bg.png',
 			transformation: [
 				{
-					height: innerHeight,
+					height: innerHeight + 200,
 					width: innerWidth,
 				},
 			],
