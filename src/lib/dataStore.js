@@ -33,7 +33,7 @@ export const dataStore = writable({
 			color: '45BBFF',
 		},
 		{
-			label: 'Messier',
+			label: 'Messier 42',
 			text: ' Es la nebulosa de Orion y es una de las nebulosas más brillantes que existen y puede ser observada a simple vista sobre el cielo nocturno, la nebulosa de Orión es uno de los objetos astronómicos más fotografiados, examinados e investigados. De ella se ha obtenido información determinante acerca de la formación de estrellas y planetas a partir de nubes de polvo y gas en colisión. Los astrónomos han observado en sus entrañas discos protoplanetarios, enanas marrones, fuertes turbulencias que alcanzan velocidades de 700.000 km por hora. Es la cuna de estrellas. Lleva el nombre del astrofísico francés Charles Messier quien fue el primero en observar estos fenómenos en el cielo, pensando que se trataban de cometas.',
 			color: 'A1DCFF',
 		},

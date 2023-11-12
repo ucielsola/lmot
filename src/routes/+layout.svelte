@@ -24,7 +24,7 @@
 			path: '/lmot/lmot_bg.png',
 			transformation: [
 				{
-					height: innerHeight + 200,
+					height: innerHeight,
 					width: innerWidth,
 				},
 			],
@@ -39,7 +39,7 @@
 <svelte:window bind:innerHeight bind:innerWidth />
 
 {#if loaded}
-	<div class="relative w-screen h-screen overflow-hidden" in:fade>
+	<div id="container" class="relative overflow-hidden" in:fade>
 		<div class="absolute -z-10">
 			<Background {imageURL} />
 		</div>
@@ -55,3 +55,11 @@
 		<Loader />
 	</div>
 {/if}
+
+<style>
+	#container {
+		height: 100vh;
+		height: 100dvh;
+		width: 100vw;
+	}
+</style>
