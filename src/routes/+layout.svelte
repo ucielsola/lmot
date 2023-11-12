@@ -19,7 +19,7 @@
 		urlEndpoint: 'https://ik.imagekit.io/ucielsola',
 	});
 
-	$: if (innerHeight && innerWidth) {
+	$: if (innerHeight && innerWidth && !imageURL) {
 		imageURL = imagekit.url({
 			path: '/lmot/lmot_bg.png',
 			transformation: [
@@ -31,7 +31,7 @@
 		});
 
 		if (imageURL) {
-			setTimeout(() => (loaded = true), 1500);
+			setTimeout(() => (loaded = true), 1200);
 		}
 	}
 </script>
