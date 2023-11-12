@@ -4,15 +4,15 @@
 	export let isLast = false;
 </script>
 
-<div class="relative">
+<div class="relative py-4">
 	<div id="ver-line" class="absolute z-0 w-[1px] bg-[#D9D9D9] h-full left-1/2" />
 
-	<div class="relative z-10 flex items-center justify-center left-[3.4rem]">
+	<div class="relative z-10 flex items-center justify-center left-[3.9rem]">
 		<svg
 			viewBox="0 0 76 50"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
-			class="py-1.5 w-[5rem]"
+			class="py-1.5 w-[7rem]"
 		>
 			<path d="M49 21V21C49 36.464 36.464 49 21 49V49" stroke="#fff" stroke-width="0.5" />
 
@@ -64,7 +64,7 @@
 			</span>
 		</div>
 	</div>
-	
+
 	{#if isLast}
 		<div
 			id="ver-line"
