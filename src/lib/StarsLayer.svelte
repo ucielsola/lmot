@@ -1,7 +1,7 @@
 <div class="star-field">
 	<div class="layer" />
 	<div class="layer" />
-	<div class="layer" />
+	<!-- <div class="layer" /> -->
 </div>
 
 <style>

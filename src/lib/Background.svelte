@@ -11,10 +11,19 @@
 		<StarsLayer />
 	</div>
 </div>
-sF
 
 <style>
 	img {
 		filter: brightness(89%) contrast(145%) hue-rotate(12deg) saturate(90%);
+		animation: zoomIn 60s ease-in;
+	}
+
+	@keyframes zoomIn {
+		0% {
+			transform: scale(1);
+		}
+		100% {
+			transform: scale(1.5);
+		}
 	}
 </style>
