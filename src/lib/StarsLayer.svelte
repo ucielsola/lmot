@@ -2,9 +2,6 @@
 	<div class="layer" />
 	<div class="layer" />
 	<div class="layer" />
-	<div class="layer" />
-	<div class="layer" />
-	<div class="layer" />
 </div>
 
 <style>
@@ -36,39 +33,6 @@
 		to {
 			transform: translateZ(-1200px);
 			opacity: 0.5;
-		}
-	}
-
-	@keyframes sf-fly-by-4 {
-		from {
-			transform: translateZ(-1100px);
-			opacity: 0.5;
-		}
-		to {
-			transform: translateZ(-430px);
-			opacity: 0.5;
-		}
-	}
-
-	@keyframes sf-fly-by-5 {
-		from {
-			transform: translateZ(-2000px);
-			opacity: 0.5;
-		}
-		to {
-			transform: translateZ(-1900px);
-			opacity: 0.5;
-		}
-	}
-
-	@keyframes sf-fly-by-6 {
-		from {
-			opacity: 0;
-			transform: scale(0);
-		}
-		to {
-			opacity: 1;
-			transform: scale(3);
 		}
 	}
 
@@ -125,17 +89,5 @@
 	}
 	.star-field .layer:nth-child(3) {
 		animation: sf-fly-by-3 5s linear infinite;
-	}
-
-	.star-field .layer:nth-child(4) {
-		animation: sf-fly-by-4 5s linear infinite;
-	}
-
-	.star-field .layer:nth-child(5) {
-		animation: sf-fly-by-5 5s linear infinite;
-	}
-
-	.star-field .layer:nth-child(6) {
-		animation: sf-fly-by-6 5s linear infinite;
 	}
 </style>
