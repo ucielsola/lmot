@@ -42,7 +42,7 @@
 	</div>
 
 	<div
-		class="relative w-full transition-[height] duration-300 ease-out border-t bg-pigment border-t-lines"
+		class="relative w-full transition-[height] duration-300 ease-out border-t bg-pigment border-t-lines will-change-[height,background-color,border]"
 		class:h-0={!open}
 		class:h-[65vh]={open}
 		class:bg-transparent={!open}
