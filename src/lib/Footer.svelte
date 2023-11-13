@@ -42,12 +42,11 @@
 	</div>
 
 	<div
-		class="relative w-full transition-[height] duration-300 ease-out border-t border-t-lines"
+		class="relative w-full transition-[height] duration-300 ease-out border-t bg-pigment border-t-lines"
 		class:h-0={!open}
 		class:h-[65vh]={open}
+		class:bg-transparent={!open}
 		class:!border-0={!open}
 		use:clickOutside={() => toggleOpen(false)}
-	>
-		<div class="h-full bg-pigment" />
-	</div>
+	/>
 </div>

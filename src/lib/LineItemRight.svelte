@@ -3,7 +3,18 @@
 	export let color = '';
 	export let isLast = false;
 	export let isFirst = false;
+
+	let innerWidth;
+	let innerCircle;
+
+	let distanceToCenter = 0;
+
+	$: if (innerWidth && innerCircle && !distanceToCenter) {
+		distanceToCenter = innerWidth / 2 - innerCircle.getBoundingClientRect().x - 2;
+	}
 </script>
+
+<svelte:window bind:innerWidth />
 
 <div class="relative py-4" class:!pt-8={isFirst}>
 	{#if isFirst}
@@ -12,12 +23,15 @@
 
 	<div id="ver-line" class="absolute z-0 w-[1px] bg-lines h-full left-1/2" />
 
-	<div class="relative z-10 flex items-center justify-center left-[3.9rem]">
+	<div
+		class="relative z-10 flex items-center justify-center left-[3.9rem]"
+		style={`transform: translateX(${distanceToCenter}px);`}
+	>
 		<svg
 			viewBox="0 0 76 50"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
-			class="py-1.5 w-[7rem]"
+			class="py-1.5 w-[6rem]"
 		>
 			<path
 				d="M49 21V21C49 36.464 36.464 49 21 49V49"
@@ -32,6 +46,7 @@
 				transform="rotate(180 21 21)"
 				class="stroke-{color} fill-{color}"
 				stroke-width="0.5"
+				bind:this={innerCircle}
 			/>
 			<circle
 				cx="21"
@@ -63,9 +78,9 @@
 			/>
 		</svg>
 
-		<div class="pb-2 -mt-1 -ml-6">
+		<div class="pb-2 -mt-1 -ml-5">
 			<span
-				class="block w-[6rem] p-1 text-xs text-center border border-{color} text-{color} rounded-md"
+				class="block min-w-[6rem] text-center p-1 px-2 text-lg border border-{color} text-{color} rounded-md"
 			>
 				{label}
 			</span>

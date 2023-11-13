@@ -39,7 +39,7 @@
 <svelte:window bind:innerHeight bind:innerWidth />
 
 {#if loaded}
-	<div class="relative w-screen h-screen overflow-hidden" in:fade>
+	<div class="relative w-screen h-[100dvh] overflow-hidden" in:fade>
 		<div class="absolute -z-10">
 			<Background {imageURL} />
 		</div>

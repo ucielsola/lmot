@@ -18,7 +18,7 @@ export const dataStore = writable({
 			color: 'ufo-green',
 		},
 		{
-			label: 'Betelgueuse',
+			label: 'Betelgeuse',
 			text: 'Es una estrella aún más grande, una supergigante roja en su último estado de vida de clase M. Es la menos 700 veces más grande que nuestro sol, incluso tiene aproximadamente el tamaño de todo nuestro sistema solar completo. Es muy fácil su observación, es el brazo de la constelación de orion, donde se encuentran las tres marias, y en cielos despejados se la ve como un punto rojo. Por su masa, luego de que muera y explote en supernova, se convertirá en un pulsar o un magnetar. Cabe destacar que se encuentra a 642,5 años luz, por lo que si exploto puede que aun no lo sepamos, de ser asi, hala luz de su explosión crearía en el cielo un segundo sol que dejaría a la tierra por al menos 6 meses sin noches.',
 			color: 'ufo-green',
 		},
