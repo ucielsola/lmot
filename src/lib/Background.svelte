@@ -11,3 +11,10 @@
 		<StarsLayer />
 	</div>
 </div>
+sF
+
+<style>
+	img {
+		filter: brightness(89%) contrast(145%) hue-rotate(12deg) saturate(90%);
+	}
+</style>
