@@ -1,14 +1,20 @@
 <script>
 	import { clickOutside } from '$lib/clickOutside.js';
-	let open = false;
+
+	import OrquestaTab from './OrquestaTab.svelte';
+	import ShowTab from './ShowTab.svelte';
+
+	export let open = false;
 	let active = 1;
 
 	let tabs = [
 		{
 			label: 'La Orquesta',
+			component: OrquestaTab,
 		},
 		{
 			label: 'El Show',
+			component: ShowTab,
 		},
 	];
 
@@ -22,8 +28,8 @@
 	};
 </script>
 
-<div class="relative min-h-[2.5rem]">
-	<div class={`absolute z-10 h-10 pl-2 flex items-end ${open ? 'top-[-2.5rem]' : 'top-0'}`}>
+<div id="footer" class="relative" class:translate-y-0={open} class:translate-y-[0.5rem]={!open}>
+	<div class={`absolute z-10 h-10 pl-2 flex items-end ${open ? 'top-[-2.5rem]' : 'top-[-3rem]'}`}>
 		{#each tabs as tab, i}
 			<button
 				class={`relative px-5 text-sm rounded-t-lg text-lines transition-[height] border duration-150
@@ -42,11 +48,12 @@
 	</div>
 
 	<div
-		class="relative w-full transition-[height] duration-300 ease-out border-t bg-pigment border-t-lines will-change-[height,background-color,border]"
-		class:h-0={!open}
-		class:h-[65vh]={open}
-		class:bg-transparent={!open}
+		class="w-full overflow-hidden transition-all duration-300 ease-out border-t bg-pigment border-t-lines"
 		class:!border-0={!open}
+		class:h-0={!open}
+		class:h-[65dvh]={open}
 		use:clickOutside={() => toggleOpen(false)}
-	/>
+	>
+		<svelte:component this={tabs[active - 1].component} />
+	</div>
 </div>
