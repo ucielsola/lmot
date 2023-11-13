@@ -35,7 +35,7 @@
 				class={`relative px-5 text-sm rounded-t-lg text-lines transition-[height] border duration-150
 			 ${
 					active === i + 1
-						? 'bg-pigment h-10 -mb-[1px] z-10 border-lines !border-b-transparent'
+						? 'bg-pigment h-10 -mb-[2px] z-10 border-lines !border-b-transparent'
 						: 'bg-pigment/90 h-[2.1rem] !border-transparent'
 				}
 			 ${i > 0 && '-ml-2'}
