@@ -14,16 +14,15 @@
 
 <style>
 	img {
-		filter: brightness(89%) contrast(145%) hue-rotate(12deg) saturate(90%);
-		animation: zoomIn 60s ease-in;
+		animation: zoomIn 40s linear;
 	}
 
 	@keyframes zoomIn {
 		0% {
-			transform: scale(1);
+			transform: scale(1.5);
 		}
 		100% {
-			transform: scale(1.5);
+			transform: scale(1);
 		}
 	}
 </style>

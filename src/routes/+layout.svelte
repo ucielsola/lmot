@@ -21,11 +21,11 @@
 
 	$: if (innerHeight && innerWidth && !imageURL) {
 		imageURL = imagekit.url({
-			path: '/lmot/lmot_bg.png',
+			path: '/lmot/lmot_bg.webp',
 			transformation: [
 				{
-					height: innerHeight * 1.1,
-					width: innerWidth * 1.1,
+					height: innerHeight * 1.7,
+					width: innerWidth * 1.7,
 				},
 			],
 		});
