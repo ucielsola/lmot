@@ -38,6 +38,7 @@
 						? 'bg-pigment h-10 -mb-[2px] z-10 border-lines !border-b-transparent'
 						: 'bg-pigment/90 h-[2.1rem] !border-transparent'
 				}
+				${!open && 'pb-2.5'}
 			 ${i > 0 && '-ml-2'}
 			 `}
 				on:click|stopPropagation={() => setActiveTab(i)}

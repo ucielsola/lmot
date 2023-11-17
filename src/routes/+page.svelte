@@ -13,8 +13,8 @@
 	let footerOpen;
 </script>
 
-<div relativ>
-	<div bind:clientHeight={headerHeight}>
+<main class="relative z-0">
+	<header bind:clientHeight={headerHeight}>
 		<Header />
 
 		<h3
@@ -22,25 +22,25 @@
 		>
 			SINFONÍA ESTELAR TANGUERA
 		</h3>
-	</div>
+	</header>
 
-	<div
+	<section
 		class="z-0 flex flex-col items-center w-full pb-20 overflow-x-hidden overflow-y-auto"
 		in:fade={{ delay: 500 }}
 		style={`height: calc(100dvh - ${headerHeight}px - ${footerOpen ? footerHeight : 0}px);`}
 	>
-		{#each $dataStore.data as { label, color }, i}
+		{#each $dataStore.data as { id }, i}
 			{@const isLast = i === $dataStore.data.length - 1}
 
 			{#if i % 2 !== 0}
-				<LineItemRight {label} {color} {isLast} isFirst={i === 0} />
+				<LineItemRight {id} {isLast} isFirst={i === 0} />
 			{:else}
-				<LineItemLeft {label} {color} {isLast} isFirst={i === 0} />
+				<LineItemLeft {id} {isLast} isFirst={i === 0} />
 			{/if}
 		{/each}
-	</div>
+	</section>
 
-	<div class="z-10" bind:clientHeight={footerHeight}>
+	<footer class="z-10" bind:clientHeight={footerHeight}>
 		<Footer bind:open={footerOpen} />
-	</div>
-</div>
+	</footer>
+</main>

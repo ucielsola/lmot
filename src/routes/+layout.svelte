@@ -8,6 +8,7 @@
 	import StarsLayer from '$lib/StarsLayer.svelte';
 	import Loader from '$lib/loader.svelte';
 	import Background from '$lib/Background.svelte';
+	import Modal from '../lib/Modal.svelte';
 
 	let imageURL;
 	let innerHeight;
@@ -38,13 +39,15 @@
 
 <svelte:window bind:innerHeight bind:innerWidth />
 
+<Modal />
+
 {#if loaded}
 	<div class="relative w-screen h-[100dvh] overflow-hidden" in:fade>
 		<div class="absolute -z-10">
 			<Background {imageURL} />
 		</div>
 
-		<div class="w-full h-full overflow-clip" in:fade={{ delay: 300 }}>
+		<div class="relative z-0 w-full h-full overflow-scroll" in:fade={{ delay: 300 }}>
 			<slot />
 		</div>
 	</div>
