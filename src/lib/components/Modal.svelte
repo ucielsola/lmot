@@ -60,7 +60,7 @@
 		</button>
 
 		<div
-			class="relative z-20 p-2.5 border rounded-md h-min border-{$dataStore.selected
+			class="relative max-w-[40rem] z-20 p-2.5 border rounded-md h-min border-{$dataStore.selected
 				.color} bg-modal-bg bg-opacity-40 text-lines"
 			use:clickOutside={{
 				stopPropagation: true,

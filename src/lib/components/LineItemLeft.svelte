@@ -14,7 +14,7 @@
 	let distanceToCenter = 0;
 
 	$: if (innerWidth && innerCircle && !distanceToCenter) {
-		distanceToCenter = innerWidth / 2 - innerCircle.getBoundingClientRect().x - 2;
+		distanceToCenter = innerWidth / 2 - innerCircle.getBoundingClientRect().x - 3;
 	}
 
 	const handleClick = (e) => {
