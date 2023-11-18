@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { dataStore } from './dataStore';
 
-	export let id: number;
+	export let id: string;
 	export let isLast = false;
 	export let isFirst = false;
 
@@ -16,9 +16,7 @@
 		distanceToCenter = innerWidth / 2 - innerCircle.getBoundingClientRect().x - 2;
 	}
 
-	const handleClick = () => {
-		console.log('click');
-
+	const handleClick = (e) => {
 		dataStore.update((state) => ({
 			...state,
 			selected: item,
@@ -28,7 +26,7 @@
 
 <svelte:window bind:innerWidth />
 
-<button class="relative py-4" class:!pt-8={isFirst} on:click|stopPropagation={handleClick}>
+<button {id} class="relative py-4" class:!pt-8={isFirst} on:click|stopPropagation={handleClick}>
 	{#if isFirst}
 		<div id="ver-line-1" class="absolute z-0 w-[1px] bg-lines h-[2rem] left-1/2 top-0" />
 	{/if}

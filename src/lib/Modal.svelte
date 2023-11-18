@@ -1,12 +1,14 @@
 <script>
-	import { clickOutside } from '$lib/clickOutside.js';
+	import { clickOutside } from './clickOutside.js';
 	import { fade } from 'svelte/transition';
-	import { dataStore } from '$lib/dataStore';
+	import { dataStore } from './dataStore';
 
 	const handleClose = () => {
+		if (!$dataStore.selected) return;
+		
 		dataStore.update((state) => ({
 			...state,
-			selected: null,
+			selected: undefined,
 		}));
 	};
 </script>
@@ -22,7 +24,10 @@
 		<div
 			class="relative z-20 p-2.5 border rounded-md h-min border-{$dataStore.selected
 				.color} bg-modal-bg bg-opacity-40 text-lines"
-			use:clickOutside={$dataStore.selected ? handleClose : null}
+			use:clickOutside={{
+				stopPropagation: true,
+				handler: () => handleClose(),
+			}}
 			in:fade={{ delay: 150 }}
 			out:fade={{ delay: 0 }}
 		>

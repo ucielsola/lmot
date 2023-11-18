@@ -1,18 +1,20 @@
-export function clickOutside(element, callbackFunction) {
+export function clickOutside(element, { stopPropagation, handler }) {
 	function onClick(event) {
-		if (!element.contains(event.target)) {
-			callbackFunction();
+		if (!element.id !== event.target.id) {
+			if (stopPropagation) event.stopPropagation();
+			if (typeof handler !== 'function') return;
+			handler();
 		}
 	}
 
-	document.body.addEventListener('click', onClick);
+	document.addEventListener('click', onClick);
 
 	return {
 		update(newCallbackFunction) {
-			callbackFunction = newCallbackFunction;
+			handler = newCallbackFunction;
 		},
 		destroy() {
-			document.body.removeEventListener('click', onClick);
+			document.removeEventListener('click', onClick);
 		},
 	};
 }

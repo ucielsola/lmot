@@ -13,7 +13,7 @@
 	let footerOpen;
 </script>
 
-<main class="relative z-0">
+<main class="relative z-0 overflow-hidden">
 	<header bind:clientHeight={headerHeight}>
 		<Header />
 
@@ -40,7 +40,7 @@
 		{/each}
 	</section>
 
-	<footer class="z-10" bind:clientHeight={footerHeight}>
+	<footer class="z-10 w-full" bind:clientHeight={footerHeight}>
 		<Footer bind:open={footerOpen} />
 	</footer>
 </main>
