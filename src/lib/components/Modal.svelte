@@ -1,7 +1,18 @@
 <script>
 	import { fade } from 'svelte/transition';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+
 	import { clickOutside } from '$lib/actions/clickOutside.js';
 	import { dataStore } from '$lib/data/dataStore.js';
+
+	let navigateTimeout;
+
+	$: if ($page?.url?.hash === '') {
+		navigateTimeout = setTimeout(() => {
+			handleClose();
+		}, 100);
+	}
 
 	const handleClose = () => {
 		if (!$dataStore.selected) return;
@@ -10,6 +21,10 @@
 			...state,
 			selected: undefined,
 		}));
+
+		goto('./');
+
+		clearTimeout(navigateTimeout);
 	};
 </script>
 

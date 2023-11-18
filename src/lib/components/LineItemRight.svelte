@@ -1,9 +1,10 @@
 <script>
+	import { goto } from '$app/navigation';
+	import { dataStore } from '$lib/data/dataStore';
+
 	export let id;
 	export let isLast = false;
 	export let isFirst = false;
-
-	import { dataStore } from '$lib/data/dataStore';
 
 	$: item = $dataStore.data.find((item) => item.id === id);
 
@@ -21,6 +22,8 @@
 			...state,
 			selected: item,
 		}));
+
+		goto(`./#${item.label}`);
 	};
 </script>
 

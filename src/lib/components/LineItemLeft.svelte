@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation';
 	import { dataStore } from '$lib/data/dataStore';
 
 	export let id;
@@ -21,6 +22,8 @@
 			...state,
 			selected: item,
 		}));
+
+		goto(`./#${item.label}`);
 	};
 </script>
 
