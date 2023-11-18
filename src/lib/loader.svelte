@@ -1,4 +1,4 @@
-<span class="loader" />
+<div class="loader" />
 
 <style>
 	.loader {

@@ -9,6 +9,7 @@
 	import Loader from '$lib/loader.svelte';
 	import Background from '$lib/Background.svelte';
 	import Modal from '../lib/Modal.svelte';
+	import LoadingScreen from '../lib/LoadingScreen.svelte';
 
 	let imageURL;
 	let innerHeight;
@@ -32,7 +33,7 @@
 		});
 
 		if (imageURL) {
-			setTimeout(() => (loaded = true), 1000);
+			setTimeout(() => (loaded = true), 800);
 		}
 	}
 </script>
@@ -42,19 +43,15 @@
 <Modal />
 
 {#if loaded}
-	<div class="relative w-screen h-[100dvh] overflow-hidden" in:fade>
-		<div class="absolute -z-10">
+	<div class="relative w-screen h-[100dvh] overflow-hidden">
+		<div class="absolute -z-10" in:fade>
 			<Background {imageURL} />
 		</div>
 
-		<div class="relative z-0 w-full h-full overflow-scroll" in:fade={{ delay: 300 }}>
+		<div class="relative z-0 w-full h-full overflow-scroll">
 			<slot />
 		</div>
 	</div>
 {:else}
-	<div class="flex items-center justify-center w-screen h-screen" out:fade>
-		<StarsLayer />
-
-		<Loader />
-	</div>
+	<LoadingScreen />
 {/if}
