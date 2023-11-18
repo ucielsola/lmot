@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	@font-face {
+		font-family: 'Mohave';
+		src: local('Mohave'), local('Mohave'), url('/fonts/Mohave-Regular.ttf');
+		font-weight: 400;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Mohave';
+		src: local('Mohave'), local('Mohave'), url('/fonts/Mohave-Light.ttf');
+		font-weight: 300;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Mohave';
+		src: local('Mohave'), local('Mohave'), url('/fonts/Mohave-Medium.ttf');
+		font-weight: 500;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Mohave';
+		src: local('Mohave'), local('Mohave'), url('/fonts/Mohave-Bold.ttf');
+		font-weight: 700;
+		font-display: swap;
+	}
+}
+
+* {
+	font-family: 'Mohave', sans-serif;
+}
+
 button {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;

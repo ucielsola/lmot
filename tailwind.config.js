@@ -8,6 +8,8 @@ const customColors = {
 	'winter-wizard': '#A1DCFF',
 	pigment: '#22389C',
 	transparent: 'transparent',
+	'modal-backdrop': '#1820C9',
+	'modal-bg': '#333',
 };
 
 const createSafeList = (color) => {
@@ -19,6 +21,9 @@ export default {
 	theme: {
 		extend: {},
 		colors: customColors,
+		fontFamily: {
+			mohave: ['Mohave'],
+		},
 	},
 	safelist: Object.keys(customColors).map(createSafeList).flat(),
 	plugins: [],

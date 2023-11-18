@@ -1,7 +1,10 @@
+<script lang="ts">
+	import { fade } from 'svelte/transition';
+</script>
+
 <div class="star-field">
-	<div class="layer" />
-	<div class="layer" />
-	<!-- <div class="layer" /> -->
+	<div class="layer" transition:fade />
+	<div class="layer" transition:fade />
 </div>
 
 <style>
