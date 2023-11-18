@@ -5,11 +5,15 @@
 
 	import ImageKit from 'imagekit-javascript';
 
-	import StarsLayer from '$lib/StarsLayer.svelte';
-	import Loader from '$lib/loader.svelte';
 	import Background from '$lib/Background.svelte';
 	import Modal from '../lib/Modal.svelte';
 	import LoadingScreen from '../lib/LoadingScreen.svelte';
+
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+
+	// inject vercel analytics
+	inject({ mode: dev ? 'development' : 'production' });
 
 	let imageURL;
 	let innerHeight;
