@@ -1,7 +1,7 @@
-<script lang="ts">
-	import { dataStore } from './dataStore';
+<script>
+	import { dataStore } from '$lib/data/dataStore';
 
-	export let id: string;
+	export let id;
 	export let isLast = false;
 	export let isFirst = false;
 

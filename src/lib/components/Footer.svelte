@@ -1,10 +1,10 @@
 <script>
-	import { clickOutside } from './clickOutside.js';
-	import { dragNode } from './dragNode.js';
+	import { clickOutside } from '$lib/actions/clickOutside.js';
+	import { dragNode } from '$lib/actions/dragNode.js';
 
-	import OrquestaTab from './OrquestaTab.svelte';
-	import ShowTab from './ShowTab.svelte';
-	import { dataStore } from './dataStore';
+	import OrquestaTab from '$lib/components/OrquestaTab.svelte';
+	import ShowTab from '$lib/components/ShowTab.svelte';
+	import { dataStore } from '$lib/data/dataStore';
 
 	let open = false;
 	let isDragging = false;

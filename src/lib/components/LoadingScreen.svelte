@@ -1,9 +1,9 @@
-<script lang="ts">
+<script>
 	import { fade } from 'svelte/transition';
 
-	import StarsLayer from './StarsLayer.svelte';
-	import Loader from './loader.svelte';
-	import Header from './Header.svelte';
+	import StarsLayer from '$lib/components/StarsLayer.svelte';
+	import Loader from '$lib/components/loader.svelte';
+	import Header from '$lib/components/Header.svelte';
 </script>
 
 <div class="relative flex flex-col justify-center w-screen h-screen gap-10">

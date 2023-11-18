@@ -1,9 +1,9 @@
-<script lang="ts">
-	export let id: number;
+<script>
+	export let id;
 	export let isLast = false;
 	export let isFirst = false;
 
-	import { dataStore } from './dataStore';
+	import { dataStore } from '$lib/data/dataStore';
 
 	$: item = $dataStore.data.find((item) => item.id === id);
 

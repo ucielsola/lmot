@@ -2,15 +2,14 @@
 	import '../app.css';
 
 	import { fade } from 'svelte/transition';
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
 
 	import ImageKit from 'imagekit-javascript';
 
-	import Background from '$lib/Background.svelte';
-	import Modal from '../lib/Modal.svelte';
-	import LoadingScreen from '../lib/LoadingScreen.svelte';
-
-	import { dev } from '$app/environment';
-	import { inject } from '@vercel/analytics';
+	import Background from '$lib/components/Background.svelte';
+	import Modal from '$lib/components/Modal.svelte';
+	import LoadingScreen from '$lib/components/LoadingScreen.svelte';
 
 	// inject vercel analytics
 	inject({ mode: dev ? 'development' : 'production' });

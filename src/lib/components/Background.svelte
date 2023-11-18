@@ -1,5 +1,5 @@
 <script>
-	import StarsLayer from '$lib/StarsLayer.svelte';
+	import StarsLayer from '$lib/components/StarsLayer.svelte';
 
 	export let imageURL;
 </script>

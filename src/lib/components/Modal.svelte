@@ -1,11 +1,11 @@
 <script>
-	import { clickOutside } from './clickOutside.js';
 	import { fade } from 'svelte/transition';
-	import { dataStore } from './dataStore';
+	import { clickOutside } from '$lib/actions/clickOutside.js';
+	import { dataStore } from '$lib/data/dataStore.js';
 
 	const handleClose = () => {
 		if (!$dataStore.selected) return;
-		
+
 		dataStore.update((state) => ({
 			...state,
 			selected: undefined,
