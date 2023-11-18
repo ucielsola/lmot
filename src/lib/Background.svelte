@@ -14,7 +14,7 @@
 
 <style>
 	img {
-		animation: zoomIn 40s linear;
+		animation: zoomIn 40s linear infinite alternate;
 	}
 
 	@keyframes zoomIn {
