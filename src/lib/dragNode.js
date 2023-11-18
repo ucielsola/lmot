@@ -1,10 +1,11 @@
 export function dragNode(node, touchEndCallback) {
 	const windowH = window.innerHeight;
 	const footerH = node.offsetHeight;
-	const dragToOpenThreshold = 20;
+
+	if (!node) return;
+
 	let dragged;
 	let direction;
-
 	node.addEventListener('touchstart', touchstart);
 	node.addEventListener('touchmove', touchmove);
 	node.addEventListener('touchend', touchend);
@@ -25,7 +26,6 @@ export function dragNode(node, touchEndCallback) {
 		const newPosition = dragged - windowH;
 
 		if (newPosition > 0 || Math.abs(newPosition) >= footerH) return;
-
 		node.style.transform = `translateY(${newPosition}px)`;
 	}
 
