@@ -27,10 +27,20 @@
 		font-weight: 700;
 		font-display: swap;
 	}
+	@font-face {
+		font-family: 'Clarendon';
+		src: local('Clarendon'), local('Clarendon'), url('/fonts/Clarendon-Bold.ttf');
+		font-weight: 700;
+		font-display: swap;
+	}
 }
 
 * {
 	font-family: 'Mohave', sans-serif;
+}
+
+.clarendon {
+	font-family: 'Clarendon', sans-serif !important;
 }
 
 button {

@@ -69,7 +69,7 @@
 			in:fade={{ delay: 150 }}
 			out:fade={{ delay: 0 }}
 		>
-			<h1 class="text-4xl pb-4 font-medium text-center text-{$dataStore.selected.color}">
+			<h1 class="clarendon text-4xl pb-4 font-medium text-center text-{$dataStore.selected.color}">
 				{$dataStore.selected.label}
 			</h1>
 
