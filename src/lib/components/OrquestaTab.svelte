@@ -7,7 +7,7 @@
 	<div class="flex items-start gap-1 whitespace-nowrap">
 		<span class="text-xs text-lines/70">Violines:</span>
 		<span class="text-sm font-bold whitespace-normal">
-			Juan David Villegas Restrepo, Sofía Lara, María Bice Gambandé, Luz Merlo
+			Juan David Villegas Restrepo, Pedro Sotello, María Bice Gambandé, Luz Merlo
 		</span>
 	</div>
 
