@@ -62,13 +62,13 @@
 <svelte:window bind:innerWidth={windowH} />
 
 <div
-	class="absolute bottom-auto w-full transition-all duration-300 ease-out"
+	class="absolute bottom-auto w-full transition-all duration-300 ease-out bg-footer"
 	style={`transform: ${
 		!open && !isDragging
 			? 'translateY(0)'
 			: open && !isDragging
-			? `translateY(${footerH * -1}px)`
-			: ''
+			  ? `translateY(${footerH * -1}px)`
+			  : ''
 	};`}
 	use:dragNode={() => dragToClose()}
 	on:touchstart={handleTouchStart}
@@ -78,7 +78,7 @@
 	<div class={`absolute z-10 h-10 pl-2 flex items-end`}>
 		{#each tabs as tab, i}
 			<button
-				class={`relative px-5 text-sm h-8 rounded-t-lg text-lines -top-10 border transition-[height] duration-300 ease-out
+				class={`relative px-5 text-sm h-8 rounded-t-lg text-lines -top-10 border transition-[height] duration-300 ease-out bg-footer
 			 	${
 					active === i + 1
 						? 'bg-pigment !h-10 -mb-[1px] z-10 border-lines !border-b-transparent'

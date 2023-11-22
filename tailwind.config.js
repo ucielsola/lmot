@@ -13,6 +13,7 @@ const customColors = {
 	transparent: 'transparent',
 	'modal-backdrop': '#1820C9',
 	'modal-bg': '#333',
+	footer: '#182167',
 };
 
 const createSafeList = (color) => {

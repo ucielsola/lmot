@@ -23,4 +23,18 @@
 		<span class="text-xs text-lines/70">Programa Online:</span>
 		<span class="text-sm font-bold">Uciel Sola</span>
 	</div>
+
+	<div class="flex flex-col items-center justify-center mt-4">
+		<span class="text-sm font-bold"> Especial agradecimiento a Marcelo Lodigiani </span>
+
+		<a
+			href="https://amadeuspianos.com.ar"
+			rel="noreferrer"
+			target="_blank"
+			title="Amadeus Pianos"
+			class=""
+		>
+			<img src="/images/amadeus.svg" alt="Amadeus logo" class="w-32 h-full" />
+		</a>
+	</div>
 </div>
