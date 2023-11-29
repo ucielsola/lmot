@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const customColors = {
+	white: '#FFFFFF',
 	lines: '#D9D9D9',
 	laniakea: '#F1DA0C',
 	sirius: '#F4D4F2',

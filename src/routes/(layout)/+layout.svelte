@@ -1,5 +1,5 @@
 <script>
-	import '../app.css';
+	import '$appCss';
 
 	import { fade } from 'svelte/transition';
 	import { dev } from '$app/environment';
@@ -39,6 +39,8 @@
 			setTimeout(() => (loaded = true), 800);
 		}
 	}
+
+	$: console.log('layout');
 </script>
 
 <svelte:window bind:innerHeight bind:innerWidth />
