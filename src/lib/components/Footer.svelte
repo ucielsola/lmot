@@ -78,10 +78,10 @@
 	<div class={`absolute z-10 h-10 pl-2 flex items-end`}>
 		{#each tabs as tab, i}
 			<button
-				class={`relative px-5 text-sm h-8 rounded-t-lg text-lines -top-10 border transition-[height] duration-300 ease-out bg-footer
+				class={`relative px-5 text-sm h-[34px] rounded-t-lg text-lines -top-10 border transition-[height] duration-300 ease-out bg-footer
 			 	${
 					active === i + 1
-						? 'bg-pigment !h-10 -mb-[1px] z-10 border-lines !border-b-transparent'
+						? 'bg-pigment !h-10 -mb-[1px] z-10 border-lines !border-b-0 !border-b-transparent'
 						: 'bg-pigment/90 h-[2.1rem] !border-transparent'
 				}
 			 	${i > 0 && '-ml-2'}
