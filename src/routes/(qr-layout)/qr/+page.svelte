@@ -19,7 +19,7 @@
 		>
 			Programa Interactivo
 		</h3>
-		<div class="w-1/2">
+		<div class="w-2/3">
 			<img src="/images/QR.png" alt="QR" class="w-full h-full shadow-lg" />
 		</div>
 	</div>
