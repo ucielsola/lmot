@@ -4,7 +4,9 @@
 
 <div class="flex h-full">
 	<div class="flex flex-col items-center justify-center flex-1 gap-10 -mt-24">
+		<div class='scale-110'>
 		<Header />
+		</div>
 
 		<h3
 			class="mx-4 text-6xl leading-none tracking-tighter text-center text-white border-b border-lines"
