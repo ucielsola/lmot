@@ -7,13 +7,13 @@
 	<div class="flex items-start gap-1 whitespace-nowrap">
 		<span class="text-xs text-lines/70">Violines:</span>
 		<span class="text-sm font-bold whitespace-normal">
-			Juan David Villegas Restrepo, Pedro Sotelo, María Bice Gambandé, Luz Merlo
+			Sofía Lara, María Bice Gambandé, Luz Merlo, Valentina Sica
 		</span>
 	</div>
 
 	<div class="flex items-center gap-1 whitespace-nowrap">
 		<span class="text-xs text-lines/70">Viola:</span>
-		<span class="text-sm font-bold">Lulú Garibotto</span>
+		<span class="text-sm font-bold">Félix Nieto</span>
 	</div>
 
 	<div class="flex items-center gap-1 whitespace-nowrap">
